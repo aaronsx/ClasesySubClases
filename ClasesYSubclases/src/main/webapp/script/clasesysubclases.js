@@ -9,23 +9,24 @@ class Poligono
           return this.nombre;
      }
 }
-
+let poli =new Poligono(100,200);
+console.log(poli.nombre());
+document.write("Anchura: "+poli.ancho+"Altura: "+poli.altura);
 class Cuadrado extends Poligono 
 {
    constructor(lado){
-          super();
-          this.lado=lado;
-           this.nombre = "Poligono";
+          super(lado, lado);
+           this.nombre = "Cuadrado";
 }
 		calculaArea()
 		{
-		return this.lado*this.lado;
+			return this.altura*this.ancho;
 	    }
 }
 
 function claseCuadrado(){
 	var cuadrado = new Cuadrado(4);
-document.write(cuadrado.calculaArea());
+	document.write("El aria es: "+cuadrado.calculaArea());
 }   
 
      
